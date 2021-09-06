@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport">
+    <title>Airversary</title>
+    <link rel="icon" href="favicon.ico">
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- css -->
+    <link rel="stylesheet" href="./style.css" />
+    <!-- jQuery is required -->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <!-- Firebase -->
+    <script src="https://www.gstatic.com/firebasejs/8.8.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.8.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.8.1/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.8.1/firebase-analytics.js"></script>
+    <script>
+        var firebaseConfig = {
+            apiKey: "AIzaSyCQrHeB1i1RGCIX7mo78LOICreWr8IXVRQ",
+            authDomain: "birthday-airline.firebaseapp.com",
+            databaseURL: "https://birthday-airline-default-rtdb.asia-southeast1.firebasedatabase.app",
+            projectId: "birthday-airline",
+            storageBucket: "birthday-airline.appspot.com",
+            messagingSenderId: "232218864966",
+            appId: "1:232218864966:web:c435e49b62027fc08c4947",
+            measurementId: "G-WHS2HRQQ46"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+        firebase.analytics();
+    </script>
+    <script type="application/javascript">
+        function data_add() {
+            document.getElementById("AirlineTable").style = "visibility: visible;"
+
+            var month = $('#select-month').val();
+            var date = $('#select-date').val();
+
+            var birthday = month + date;
+
+            var $detpos = $("tbody");
+            var db = firebase.database();
+            var tr_date_data = db.ref(birthday);
+            $detpos.empty();
+            tr_date_data.once("value")
+                .then(function (snapshot) {
+                    snapshot.forEach(function (childSnapshot) {
+                        var CodeName = childSnapshot.key;
+                        var A_code = childSnapshot.child('A_code').val();
+                        var A_place = childSnapshot.child('A_place').val();
+                        var AirlineName = childSnapshot.child('AirName').val();
+                        var D_code = childSnapshot.child('D_code').val();
+                        var D_place = childSnapshot.child('D_place').val();
+                        $detpos.prepend('<tr><td>' + CodeName +
+                            '</td><td>' + AirlineName +
+                            '</td><td>' + D_place +
+                            '</td><td>' + D_code +
+                            '</td><td>' + A_place +
+                            '</td><td>' + A_code +
+                            '</td></tr>');
+                    });
+                });
+        }
+
+        function select_add() {
+            $s1 = $('#select-month');
+            $s2 = $('#select-date');
+            for (var step = 11; step > 0; step--) {
+                $s1.prepend('<option value="' + step + '">' + step + '月</option>');
+            }
+            for (var step = 30; step > 0; step--) {
+                var ret = ('00' + step).slice(-2);
+                $s2.prepend('<option value="' + ret + '">' + step + '日</option>');
+            }
+        }
+    </script>
+</head>
+
+
+<body class="container">
+    <nav>
+        <a href="#" class="brand-logo center">Airversary</a>
+    </nav>
+    <div>
+    <ul class="">  
+      <li class="">・便名が月日(誕生日)となっているフライトを検索できるサービスです．</li>
+      <li class="">・例えば12月31日を選択すると，世界中の航空会社のXX-1231便が表示されます(XXは航空会社の2レターコード)．</li>
+      <li class="">・なお1月11日→111便，11月1日→1101便となります．</li>
+      <li class="">・サービス名Airversaryは，airとanniversaryと掛け合わせた造語です．</li>
+    </ul>
+    </div>
+    <div class="row">
+        <div class="input-field col s4">
+            <select id="select-month">
+                <option value="12">12月</option>
+            </select>
+        </div>
+        <div class="input-field col s4">
+            <select id="select-date">
+                <option value="31">31日</option>
+            </select>
+        </div>
+        <div class="col s3">
+            <button class="btn waves-effect waves-light" name="action" onclick="data_add();">検索
+                <i class="material-icons right">flight</i>
+            </button>
+        </div>
+    </div>
+    <table class="" id="AirlineTable">
+        <thead>
+            <tr>
+                <th class="">便名</th>
+                <th class="">航空会社</th>
+                <th class="">出発地</th>
+                <th class=""></th>
+                <th class="">到着地</th>
+                <th class=""></th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+    <div>
+        <ul class="">
+      <li class="">・データは2021年の7月に収集したものです．</li>
+      <li class="">・現在運航していない可能性や，違う路線に割り当てられている可能性はあります．</li>
+    </ul>
+</div>
+    <footer class="page-footer">
+        <div class="footer-copyright">
+            <div class="container">
+                © 2021 Copyright Takala(@IamTakala) and Yuki
+            </div>
+        </div>
+    </footer>
+</body>
+
+<script>
+    var sl = $('select');
+    $(document).ready(function () {
+        $('select').formSelect();
+    });
+    select_add();
+</script>
+
+</html>
