@@ -90,7 +90,7 @@
         </a>
     </nav>
 
-    <ul class="">
+    <ul class="ml mr">
         <li class="">・便名が月日(誕生日)となっているフライトを検索できるサイトです．</li>
         <li class="">・例えば12月31日を選択すると，世界中の航空会社のXX-1231便が表示されます(XXは航空会社の2レターコード)．</li>
         <li class="">・なお1月11日→111便，11月1日→1101便となります．</li>
@@ -134,7 +134,7 @@
             </table>
         </div>
     </div>
-    <ul class="">
+    <ul class="ml mr">
         <li class="">・データは2021年の7月に収集したものです．</li>
         <li class="">・現在運航していない可能性や，違う路線に割り当てられている可能性があります．</li>
     </ul>
@@ -148,11 +148,10 @@
 </body>
 
 <script>
-    var sl = $('select');
+    select_add();
     $(document).ready(function () {
         $('select').formSelect();
     });
-    select_add();
 </script>
 
 </html>

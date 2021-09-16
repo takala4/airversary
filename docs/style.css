@@ -40,12 +40,11 @@ span {
 }
 
 
-
-li {
-    margin-top: 0px;
-    margin-bottom: 0px;
+.ml {
     margin-left: 30px;
-    margin-right: 30px;
 }
 
+.mr {
+    margin-right: 30px;
+}
 
