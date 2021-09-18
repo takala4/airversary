@@ -85,7 +85,7 @@
 </head>
 
 
-<body class="lg:container lg:mx-auto flex flex-col min-h-screen">
+<body class="lg:container lg:mx-auto justify-center">
     <nav class="flex items-center justify-between flex-wrap bg-teal-500 p-6">
         <div class="flex items-center flex-shrink-0 text-red-400 mr-6">
             <img class="fill-current h-8 w-8 mr-2" width="54" height="54" viewBox="0 0 54 54" src="icon.svg">
@@ -93,17 +93,19 @@
         </div>
     </nav>
     <main class="flex-grow">
-        <div class="flex flex-wrap -mx-3 mb-2">
+        <div class="grid grid-cols-12 sm:grid-cols-12 md:grid-cols-12 lg:grid-cols-12 xl:grid-cols-12">
+            <div class="col-start-1 col-end-12">
                 <ul class="">
                     <li class="">・便名が月日(誕生日)となっているフライトを検索できるサイトです．</li>
                     <li class="">・例えば12月31日を選択すると，世界中の航空会社のXX-1231便が表示されます(XXは航空会社の2レターコード)．</li>
                     <li class="">・なお1月11日→111便，11月1日→1101便となります．</li>
                     <li class="">・サイト名Airversaryは，airとanniversaryと掛け合わせた造語です．</li>
                 </ul>
+            </div>
         </div>
 
-        <div class="flex flex-wrap -mx-3 mb-2">
-            <div class="w-full md:w-1/3 px-3 mb-6 md:mb-0">
+        <div class="grid grid-cols-12 sm:grid-cols-12 md:grid-cols-12 lg:grid-cols-12 xl:grid-cols-12">
+            <div class="col-start-1 col-end-4">
                 <div class="relative">
                     <select
                         class="block appearance-none w-full bg-gray-200 border border-gray-200 text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
@@ -118,7 +120,7 @@
                 </div>
             </div>
 
-            <div class="w-full md:w-1/3 px-3 mb-6 md:mb-0">
+            <div class="col-start-5 col-end-8">
                 <div class="relative">
                     <select
                         class="block appearance-none w-full bg-gray-200 border border-gray-200 text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
@@ -133,28 +135,30 @@
                 </div>
             </div>
 
-            <div class="w-full md:w-1/3 px-3 mb-6 md:mb-0">
+            <div class="col-start-9 col-end-12">
                 <div class="relative">
                     <button
                         class="bg-white hover:bg-gray-100 text-gray-800 font-semibold py-2 px-4 border border-gray-400 rounded shadow"
-                        onclick="data_add();">
-                        <i class="material-icons right"> 検索 flight</i>
+                        onclick="data_add();">検索
+                        <!-- <i class="material-icons right">flight</i> -->
                     </button>
                 </div>
             </div>
-
         </div>
-        <div class="">
-            <div class="">
-                <table class="table-auto" id="AirlineTable">
+
+
+        <div class="grid grid-cols-12 sm:grid-cols-12 md:grid-cols-12 lg:grid-cols-12 xl:grid-cols-12">
+
+            <div class="col-start-1 col-end-12">
+                <table class="table-auto" id="AirlineTable" style="visibility: hidden;">
                     <thead>
                         <tr>
-                            <th class="border px-4 py-2">便名　　</th>
-                            <th class="border px-4 py-2">航空会社　　</th>
-                            <th class="border px-4 py-2">出発地　　</th>
-                            <th class="border px-4 py-2"></th>
-                            <th class="border px-4 py-2">到着地　　</th>
-                            <th class="border px-4 py-2"></th>
+                            <th class="border px-4 py-2">便名</th>
+                            <th class="border px-4 py-2">航空会社</th>
+                            <th class="border px-4 py-2">出発地</th>
+                            <th class="border px-4 py-2 visible sm:invisible md:invisible lg:invisible xl:invisible"></th>
+                            <th class="border px-4 py-2">到着地</th>
+                            <th class="border px-4 py-2 visible sm:invisible md:invisible lg:invisible xl:invisible"></th>
                         </tr>
                     </thead>
                     <tbody></tbody>
