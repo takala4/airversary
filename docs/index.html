@@ -38,7 +38,7 @@
     </script>
     <script type="application/javascript">
         function data_add() {
-            document.getElementById("AirlineTable").style = "visibility: visible;"
+            document.getElementById("AirlineTable").style = "display:inline;"
 
             var month = $('#select-month').val();
             var date = $('#select-date').val();
@@ -59,12 +59,12 @@
                         var D_code = childSnapshot.child('D_code').val();
                         var D_place = childSnapshot.child('D_place').val();
                         $detpos.prepend(
-                            ' <tr><td class="border px-4 py-2">' + CodeName +
-                            '</td><td class="border px-4 py-2">' + AirlineName +
-                            '</td><td class="border px-4 py-2">' + D_place +
-                            '</td><td class="border px-4 py-2">' + D_code +
-                            '</td><td class="border px-4 py-2">' + A_place +
-                            '</td><td class="border px-4 py-2">' + A_code +
+                            ' <tr><td class="border px-1 py-2">' + CodeName +
+                            '</td><td class="border px-1 py-2">' + AirlineName +
+                            '</td><td class="border px-1 py-2">' + D_place +
+                            '</td><td class="border px-1 py-2 hidden xl:inline;">' + D_code +
+                            '</td><td class="border px-1 py-2">' + A_place +
+                            '</td><td class="border px-1 py-2 hidden xl:inline;">' + A_code +
                             '</td></tr>');
                     });
                 });
@@ -85,26 +85,26 @@
 </head>
 
 
-<body class="lg:container lg:mx-auto justify-center">
+<body class="flex flex-col min-h-screen sm:container md:container lg:container xl:container sm:mx-auto md:mx-auto lg:mx-auto xl:mx-auto px-1">
     <nav class="flex items-center justify-between flex-wrap bg-teal-500 p-6">
         <div class="flex items-center flex-shrink-0 text-red-400 mr-6">
             <img class="fill-current h-8 w-8 mr-2" width="54" height="54" viewBox="0 0 54 54" src="icon.svg">
-            <h1 class="font-semibold text-xl tracking-tight">Airversary</h1>
+            <h1 class="font-semibold text-4xl">Airversary</h1>
         </div>
     </nav>
-    <main class="flex-grow">
+    <main class="flex-grow px-4">
         <div class="grid grid-cols-12 sm:grid-cols-12 md:grid-cols-12 lg:grid-cols-12 xl:grid-cols-12">
-            <div class="col-start-1 col-end-12">
+            <div class="col-start-1 col-end-13">
                 <ul class="">
-                    <li class="">・便名が月日(誕生日)となっているフライトを検索できるサイトです．</li>
-                    <li class="">・例えば12月31日を選択すると，世界中の航空会社のXX-1231便が表示されます(XXは航空会社の2レターコード)．</li>
-                    <li class="">・なお1月11日→111便，11月1日→1101便となります．</li>
-                    <li class="">・サイト名Airversaryは，airとanniversaryと掛け合わせた造語です．</li>
+                    <li class="">・便名が月日（誕生日）となっているフライトを検索できるサイトです．</li>
+                    <li class="">・例えば，12月31日を検索すると，世界中の航空会社のXX-1231便が表示されます（XXは航空会社の2レターコード）．</li>
+                    <li class="">・なお，1月11日→111便となり，11月1日→1101便となります．</li>
+                    <li class="">・サイト名のAirversaryは，airとanniversaryと掛け合わせた造語です．</li>
                 </ul>
             </div>
         </div>
 
-        <div class="grid grid-cols-12 sm:grid-cols-12 md:grid-cols-12 lg:grid-cols-12 xl:grid-cols-12">
+        <div class="grid grid-cols-12 sm:grid-cols-12 md:grid-cols-12 lg:grid-cols-12 xl:grid-cols-12 py-4">
             <div class="col-start-1 col-end-4">
                 <div class="relative">
                     <select
@@ -135,43 +135,41 @@
                 </div>
             </div>
 
-            <div class="col-start-9 col-end-12">
+            <div class="col-start-9 col-end-13">
                 <div class="relative">
                     <button
                         class="bg-white hover:bg-gray-100 text-gray-800 font-semibold py-2 px-4 border border-gray-400 rounded shadow"
                         onclick="data_add();">検索
-                        <!-- <i class="material-icons right">flight</i> -->
+                        <i class="material-icons text-red-400" style="vertical-align:-5px;">flight</i>
                     </button>
                 </div>
             </div>
         </div>
 
-
-        <div class="grid grid-cols-12 sm:grid-cols-12 md:grid-cols-12 lg:grid-cols-12 xl:grid-cols-12">
-
-            <div class="col-start-1 col-end-12">
-                <table class="table-auto" id="AirlineTable" style="visibility: hidden;">
+        <!-- <div class="grid grid-cols-12 sm:grid-cols-12 md:grid-cols-12 lg:grid-cols-12 xl:grid-cols-12">
+            <div class="col-start-1 col-end-13 py-4"> -->
+                <table class="table-auto" id="AirlineTable" style="display:None;">
                     <thead>
                         <tr>
-                            <th class="border px-4 py-2">便名</th>
-                            <th class="border px-4 py-2">航空会社</th>
-                            <th class="border px-4 py-2">出発地</th>
-                            <th class="border px-4 py-2 visible sm:invisible md:invisible lg:invisible xl:invisible"></th>
-                            <th class="border px-4 py-2">到着地</th>
-                            <th class="border px-4 py-2 visible sm:invisible md:invisible lg:invisible xl:invisible"></th>
+                            <th class="border px-1 py-2">便名</th>
+                            <th class="border px-1 py-2">航空会社</th>
+                            <th class="border px-1 py-2">出発地</th>
+                            <th class="border px-1 py-2 hidden xl:inline;"></th>
+                            <th class="border px-1 py-2">到着地</th>
+                            <th class="border px-1 py-2 hidden xl:inline;"></th>
                         </tr>
                     </thead>
                     <tbody></tbody>
                 </table>
-            </div>
-        </div>
-        <ul class="">
+            <!-- </div>
+        </div> -->
+        <ul class="py-4">
             <li class="">・データは2021年の7月に収集したものです．</li>
             <li class="">・現在運航していない可能性や，違う路線に割り当てられている可能性があります．</li>
         </ul>
     </main>
     <footer class="bg-gray-200">
-        <p class="p-2 text-center text-xs">© 2021 Copyright Takala(@IamTakala) and Yuki. All Rights Reserved.</p>
+        <p class="p-2 text-center text-xs">© 2021 Copyright Takala(@IamTakala) and Yuki.</p>
     </footer>
 </body>
 
