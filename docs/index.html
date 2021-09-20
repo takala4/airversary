@@ -11,7 +11,6 @@
     <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <!-- css -->
-    <!-- <link rel="stylesheet" href="./style.css" /> -->
     <!-- jQuery is required -->
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
     <!-- Compiled and minified JavaScript -->
@@ -21,6 +20,18 @@
     <script src="https://www.gstatic.com/firebasejs/8.8.1/firebase-auth.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.8.1/firebase-database.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.8.1/firebase-analytics.js"></script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-JBG0NRC3G0"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+
+        gtag('config', 'G-JBG0NRC3G0');
+    </script>
     <script>
         var firebaseConfig = {
             apiKey: "AIzaSyCQrHeB1i1RGCIX7mo78LOICreWr8IXVRQ",
@@ -39,6 +50,7 @@
     <script type="application/javascript">
         function data_add() {
             document.getElementById("AirlineTable").style = "display:inline;"
+            document.getElementById("AD").style = "display:inline;"
 
             var month = $('#select-month').val();
             var date = $('#select-date').val();
@@ -85,7 +97,8 @@
 </head>
 
 
-<body class="flex flex-col min-h-screen sm:container md:container lg:container xl:container sm:mx-auto md:mx-auto lg:mx-auto xl:mx-auto px-1">
+<body
+    class="flex flex-col min-h-screen sm:container md:container lg:container xl:container sm:mx-auto md:mx-auto lg:mx-auto xl:mx-auto px-1">
     <nav class="flex items-center justify-between flex-wrap bg-teal-500 p-6">
         <div class="flex items-center flex-shrink-0 text-red-400 mr-6">
             <img class="fill-current h-8 w-8 mr-2" width="54" height="54" viewBox="0 0 54 54" src="icon.svg">
@@ -148,28 +161,54 @@
 
         <!-- <div class="grid grid-cols-12 sm:grid-cols-12 md:grid-cols-12 lg:grid-cols-12 xl:grid-cols-12">
             <div class="col-start-1 col-end-13 py-4"> -->
-                <table class="table-auto" id="AirlineTable" style="display:None;">
-                    <thead>
-                        <tr>
-                            <th class="border px-1 py-2">便名</th>
-                            <th class="border px-1 py-2">航空会社</th>
-                            <th class="border px-1 py-2">出発地</th>
-                            <th class="border px-1 py-2 hidden xl:inline;"></th>
-                            <th class="border px-1 py-2">到着地</th>
-                            <th class="border px-1 py-2 hidden xl:inline;"></th>
-                        </tr>
-                    </thead>
-                    <tbody></tbody>
-                </table>
-            <!-- </div>
+        <table class="table-auto" id="AirlineTable" style="">
+            <thead>
+                <tr>
+                    <th class="border px-1 py-2">便名</th>
+                    <th class="border px-1 py-2">航空会社</th>
+                    <th class="border px-1 py-2">出発地</th>
+                    <th class="border px-1 py-2 hidden xl:inline;"></th>
+                    <th class="border px-1 py-2">到着地</th>
+                    <th class="border px-1 py-2 hidden xl:inline;"></th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+        <!-- </div>
         </div> -->
         <ul class="py-4">
             <li class="">・データは2021年の7月に収集したものです．</li>
             <li class="">・現在運航していない可能性や，違う路線に割り当てられている可能性があります．</li>
         </ul>
     </main>
+    <div class="px-4 hidden" id="AD">
+        <div class="grid grid-cols-12 sm:grid-cols-12 md:grid-cols-12 lg:grid-cols-12 xl:grid-cols-12 py-4">
+            <div class="col-start-1 col-end-4">
+                <a href="https://px.a8.net/svt/ejp?a8mat=3HKHQG+GGZRAQ+DRA+U38WX" rel="nofollow">
+                    <img border="0" width="300" height="250" alt=""
+                        src="https://www26.a8.net/svt/bgt?aid=210908104996&wid=001&eno=01&mid=s00000001783005054000&mc=1"></a>
+                <img border="0" width="1" height="1" src="https://www16.a8.net/0.gif?a8mat=3HKHQG+GGZRAQ+DRA+U38WX"
+                    alt="">
+            </div>
+            <div class="col-start-5 col-end-8">
+                <a href="https://px.a8.net/svt/ejp?a8mat=3HKHQG+F9J44Y+4D9Y+5ZMCH" rel="nofollow">
+                    <img border="0" width="300" height="250" alt=""
+                        src="https://www22.a8.net/svt/bgt?aid=210908104923&wid=001&eno=01&mid=s00000020383001006000&mc=1"></a>
+                <img border="0" width="1" height="1" src="https://www16.a8.net/0.gif?a8mat=3HKHQG+F9J44Y+4D9Y+5ZMCH"
+                    alt="">
+            </div>
+            <div class="col-start-9 col-end-12">
+                <a href="https://px.a8.net/svt/ejp?a8mat=3HKHQ9+F8XOJ6+14CS+69WPT" rel="nofollow">
+                    <img border="0" width="300" height="250" alt=""
+                        src="https://www29.a8.net/svt/bgt?aid=210908097922&wid=001&eno=01&mid=s00000005230001054000&mc=1"></a>
+                <img border="0" width="1" height="1" src="https://www15.a8.net/0.gif?a8mat=3HKHQ9+F8XOJ6+14CS+69WPT"
+                    alt="">
+
+            </div>
+        </div>
+    </div>
     <footer class="bg-gray-200">
-        <p class="p-2 text-center text-xs">© 2021 Copyright Takala(@IamTakala) and Yuki.</p>
+        <p class="p-2 text-center text-xs">© 2021 Copyright Takala and Yuki.</p>
     </footer>
 </body>
 
