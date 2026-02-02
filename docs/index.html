@@ -1,192 +1,167 @@
 <!DOCTYPE html>
-<html>
+<html lang="ja">
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport">
-    <title>Airversary</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="誕生日の月日がフライト便名になっている航空便を検索できるサイト">
+    <title>Airversary - 誕生日フライト検索</title>
     <link rel="icon" href="favicon.ico">
-    <!-- Compiled and minified CSS -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Tailwind CSS -->
     <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+    <!-- Material Icons -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <!-- jQuery is required -->
-    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-    <!-- Compiled and minified JavaScript -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link href="css/style.css" rel="stylesheet">
+
     <!-- Firebase -->
     <script src="https://www.gstatic.com/firebasejs/8.8.1/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.8.1/firebase-auth.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.8.1/firebase-database.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.8.1/firebase-analytics.js"></script>
-    <!-- Google Adsensee -->
+
+    <!-- Google AdSense -->
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7836226783513005"
         crossorigin="anonymous"></script>
-    <!-- Global site tag (gtag.js) - Google Analytics -->
+
+    <!-- Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-JBG0NRC3G0"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
-
-        function gtag() {
-            dataLayer.push(arguments);
-        }
+        function gtag() { dataLayer.push(arguments); }
         gtag('js', new Date());
-
         gtag('config', 'G-JBG0NRC3G0');
     </script>
-    <script>
-        var firebaseConfig = {
-            apiKey: "AIzaSyCQrHeB1i1RGCIX7mo78LOICreWr8IXVRQ",
-            authDomain: "birthday-airline.firebaseapp.com",
-            databaseURL: "https://birthday-airline-default-rtdb.asia-southeast1.firebasedatabase.app",
-            projectId: "birthday-airline",
-            storageBucket: "birthday-airline.appspot.com",
-            messagingSenderId: "232218864966",
-            appId: "1:232218864966:web:c435e49b62027fc08c4947",
-            measurementId: "G-WHS2HRQQ46"
-        };
-        // Initialize Firebase
-        firebase.initializeApp(firebaseConfig);
-        firebase.analytics();
-    </script>
-    <script type="application/javascript">
-        function data_add() {
-            document.getElementById("AirlineTable").style = "width: 100%; "
 
-            var month = $('#select-month').val();
-            var date = $('#select-date').val();
-
-            var birthday = month + date;
-
-            var $detpos = $("tbody");
-            var db = firebase.database();
-            var tr_date_data = db.ref(birthday);
-            $detpos.empty();
-            tr_date_data.once("value")
-                .then(function (snapshot) {
-                    snapshot.forEach(function (childSnapshot) {
-                        var CodeName = childSnapshot.key;
-                        var A_code = childSnapshot.child('A_code').val();
-                        var A_place = childSnapshot.child('A_place').val();
-                        var AirlineName = childSnapshot.child('AirName').val();
-                        var D_code = childSnapshot.child('D_code').val();
-                        var D_place = childSnapshot.child('D_place').val();
-                        $detpos.prepend(
-                            ' <tr><td class="border px-1 py-2">' + CodeName +
-                            '</td><td class="border px-1 py-2">' + AirlineName +
-                            '</td><td class="border px-1 py-2">' + D_place +
-                            '</td><td class="border px-1 py-2 hidden xl:inline;">' + D_code +
-                            '</td><td class="border px-1 py-2">' + A_place +
-                            '</td><td class="border px-1 py-2 hidden xl:inline;">' + A_code +
-                            '</td></tr>');
-                    });
-                });
+    <style>
+        body {
+            font-family: 'Noto Sans JP', sans-serif;
         }
-
-        function select_add() {
-            $s1 = $('#select-month');
-            $s2 = $('#select-date');
-            for (var step = 11; step > 0; step--) {
-                $s1.prepend('<option value="' + step + '">' + step + '月</option>');
-            }
-            for (var step = 30; step > 0; step--) {
-                var ret = ('00' + step).slice(-2);
-                $s2.prepend('<option value="' + ret + '">' + step + '日</option>');
-            }
-        }
-    </script>
+    </style>
 </head>
 
-
-<body
-    class="flex flex-col min-h-screen sm:container md:container lg:container xl:container sm:mx-auto md:mx-auto lg:mx-auto xl:mx-auto px-1">
-    <nav class="flex items-center justify-between flex-wrap bg-teal-500 p-6">
-        <div class="flex items-center flex-shrink-0 text-red-400 mr-6">
-            <img class="fill-current h-8 w-8 mr-2" width="54" height="54" viewBox="0 0 54 54" src="icon.svg">
-            <h1 class="font-semibold text-4xl">Airversary</h1>
-        </div>
-    </nav>
-    <main class="flex-grow px-4">
-        <div class="grid grid-cols-12 sm:grid-cols-12 md:grid-cols-12 lg:grid-cols-12 xl:grid-cols-12">
-            <div class="col-start-1 col-end-13">
-                <ul class="">
-                    <li class="">・便名が月日（誕生日）となっているフライトを検索できるサイトです．</li>
-                    <li class="">・例えば，12月31日を検索すると，世界中の航空会社のXX-1231便が表示されます（XXは航空会社の2レターコード）．</li>
-                    <li class="">・なお，1月11日→111便となり，11月1日→1101便となります．</li>
-                    <li class="">・サイト名のAirversaryは，airとanniversaryと掛け合わせた造語です．</li>
-                </ul>
-            </div>
-        </div>
-
-        <div class="grid grid-cols-12 sm:grid-cols-12 md:grid-cols-12 lg:grid-cols-12 xl:grid-cols-12 py-4">
-            <div class="col-start-1 col-end-4">
-                <div class="relative">
-                    <select
-                        class="block appearance-none w-full bg-gray-200 border border-gray-200 text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
-                        id="select-month">
-                        <option value="12">12月</option>
-                    </select>
-                    <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
-                        <svg class="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
-                            <path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" />
-                        </svg>
-                    </div>
+<body class="flex flex-col min-h-screen">
+    <!-- Header -->
+    <header class="header">
+        <div class="max-w-5xl mx-auto px-4 py-6">
+            <div class="flex items-center gap-3">
+                <div class="bg-white p-2 rounded-xl shadow-lg">
+                    <img class="h-10 w-10" src="icon.svg" alt="Airversary logo">
+                </div>
+                <div>
+                    <h1 class="text-3xl sm:text-4xl font-bold text-white">Airversary</h1>
+                    <p class="text-rose-200 text-sm mt-1">誕生日フライト検索</p>
                 </div>
             </div>
+        </div>
+    </header>
 
-            <div class="col-start-5 col-end-8">
-                <div class="relative">
-                    <select
-                        class="block appearance-none w-full bg-gray-200 border border-gray-200 text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
-                        id="select-date">
-                        <option value="31">31日</option>
-                    </select>
-                    <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
-                        <svg class="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
-                            <path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" />
-                        </svg>
+    <!-- Main Content -->
+    <main class="flex-grow max-w-5xl mx-auto w-full px-4 py-8">
+        <!-- Description Card -->
+        <section class="card p-6 mb-6">
+            <h2 class="text-lg font-bold text-gray-800 mb-4 flex items-center gap-2">
+                <i class="material-icons text-rose-500">info</i>
+                Airversaryとは？
+            </h2>
+            <div class="space-y-1">
+                <p class="description-item">便名が月日（誕生日）となっているフライトを検索できるサイトです。</p>
+                <p class="description-item">例えば、12月31日を検索すると、世界中の航空会社のXX-1231便が表示されます（XXは航空会社の2レターコード）。</p>
+                <p class="description-item">1月11日→111便、11月1日→1101便となります。</p>
+                <p class="description-item">サイト名は「Air」と「Anniversary」を掛け合わせた造語です。</p>
+            </div>
+        </section>
+
+        <!-- Search Card -->
+        <section class="card p-6 mb-6">
+            <h2 class="text-lg font-bold text-gray-800 mb-6 flex items-center gap-2">
+                <i class="material-icons text-rose-500">search</i>
+                フライト検索
+            </h2>
+
+            <div class="flex flex-col sm:flex-row gap-4 items-end">
+                <div class="flex-1 w-full sm:w-auto">
+                    <label for="select-month" class="block text-sm font-medium text-gray-600 mb-2">月</label>
+                    <div class="relative">
+                        <select id="select-month" class="custom-select w-full py-3 px-4 pr-10 appearance-none">
+                        </select>
+                        <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-3 text-gray-500">
+                            <svg class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                            </svg>
+                        </div>
                     </div>
                 </div>
-            </div>
 
-            <div class="col-start-9 col-end-13">
-                <div class="relative">
-                    <button
-                        class="bg-white hover:bg-gray-100 text-gray-800 font-semibold py-2 px-4 border border-gray-400 rounded shadow"
-                        onclick="data_add();">検索
-                        <i class="material-icons text-red-400" style="vertical-align:-5px;">flight</i>
+                <div class="flex-1 w-full sm:w-auto">
+                    <label for="select-date" class="block text-sm font-medium text-gray-600 mb-2">日</label>
+                    <div class="relative">
+                        <select id="select-date" class="custom-select w-full py-3 px-4 pr-10 appearance-none">
+                        </select>
+                        <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-3 text-gray-500">
+                            <svg class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="w-full sm:w-auto">
+                    <button id="search-button" class="search-btn flex items-center justify-center gap-2">
+                        <i class="material-icons">flight_takeoff</i>
+                        検索する
                     </button>
                 </div>
             </div>
-        </div>
+        </section>
 
-        <!-- <div class="grid grid-cols-12 sm:grid-cols-12 md:grid-cols-12 lg:grid-cols-12 xl:grid-cols-12">
-            <div class="col-start-1 col-end-13 py-4"> -->
-        <table class="table-auto" id="AirlineTable" style="width: 100%;">
-            <thead>
-                <tr style="width: 100%; background-color:#ff8a80 ;">
-                    <th class="border px-1 py-2">便名</th>
-                    <th class="border px-1 py-2">航空会社</th>
-                    <th class="border px-1 py-2">出発地</th>
-                    <th class="border px-1 py-2 hidden xl:inline;"></th>
-                    <th class="border px-1 py-2">到着地</th>
-                    <th class="border px-1 py-2 hidden xl:inline;"></th>
-                </tr>
-            </thead>
-            <tbody></tbody>
-        </table>
-        <ul class="py-4">
-            <li class="">・データは2022年の7月に収集したものです．</li>
-            <li class="">・現在運航していない可能性や，違う路線に割り当てられている可能性があります．</li>
-        </ul>
+        <!-- Result Message -->
+        <div id="result-message" class="result-message mb-4" style="display: none;"></div>
+
+        <!-- Results Table -->
+        <section class="card overflow-hidden mb-6" id="results-section" style="display: none;">
+            <table class="flight-table" id="AirlineTable">
+                <thead>
+                    <tr>
+                        <th>便名</th>
+                        <th>航空会社</th>
+                        <th>出発地</th>
+                        <th class="hidden lg:table-cell">コード</th>
+                        <th>到着地</th>
+                        <th class="hidden lg:table-cell">コード</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </section>
+
+        <!-- Data Notice -->
+        <section class="card p-4 bg-amber-50 border border-amber-200">
+            <div class="flex items-start gap-3">
+                <i class="material-icons text-amber-500 mt-0.5">warning</i>
+                <div class="text-sm text-amber-800">
+                    <p class="font-medium mb-1">データについて</p>
+                    <p>データは2022年7月に収集したものです。現在は運航していない、または違う路線に割り当てられている可能性があります。</p>
+                </div>
+            </div>
+        </section>
     </main>
-    <footer class="bg-gray-200">
-        <p class="p-2 text-center text-xs">© 2021 Copyright Takala and Yuki.</p>
-    </footer>
-</body>
 
-<script>
-    select_add();
-</script>
+    <!-- Footer -->
+    <footer class="footer py-6">
+        <div class="max-w-5xl mx-auto px-4 text-center">
+            <div class="flex items-center justify-center gap-2 mb-2">
+                <img class="h-6 w-6 opacity-50" src="icon.svg" alt="">
+                <span class="font-medium text-gray-300">Airversary</span>
+            </div>
+            <p class="text-sm">&copy; 2021 Takala and Yuki. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/app.js"></script>
+</body>
 
 </html>
