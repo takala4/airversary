@@ -1,0 +1,221 @@
+{
+  "NRT": { "lat": 35.7647, "lng": 140.3864, "city": "成田", "cityEn": "Narita", "country": "日本" },
+  "HND": { "lat": 35.5494, "lng": 139.7798, "city": "東京", "cityEn": "Tokyo", "country": "日本" },
+  "KIX": { "lat": 34.4347, "lng": 135.2440, "city": "大阪", "cityEn": "Osaka", "country": "日本" },
+  "ITM": { "lat": 34.7855, "lng": 135.4380, "city": "大阪", "cityEn": "Osaka", "country": "日本" },
+  "NGO": { "lat": 34.8584, "lng": 136.8050, "city": "名古屋", "cityEn": "Nagoya", "country": "日本" },
+  "CTS": { "lat": 42.7752, "lng": 141.6924, "city": "札幌", "cityEn": "Sapporo", "country": "日本" },
+  "FUK": { "lat": 33.5859, "lng": 130.4512, "city": "福岡", "cityEn": "Fukuoka", "country": "日本" },
+  "OKA": { "lat": 26.1958, "lng": 127.6459, "city": "那覇", "cityEn": "Naha", "country": "日本" },
+  "SDJ": { "lat": 38.1397, "lng": 140.9170, "city": "仙台", "cityEn": "Sendai", "country": "日本" },
+  "HIJ": { "lat": 34.4361, "lng": 132.9194, "city": "広島", "cityEn": "Hiroshima", "country": "日本" },
+  "KMQ": { "lat": 36.3944, "lng": 136.4068, "city": "小松", "cityEn": "Komatsu", "country": "日本" },
+  "KOJ": { "lat": 31.8034, "lng": 130.7194, "city": "鹿児島", "cityEn": "Kagoshima", "country": "日本" },
+  "MMY": { "lat": 24.7828, "lng": 125.2950, "city": "宮古島", "cityEn": "Miyako", "country": "日本" },
+  "ISG": { "lat": 24.3964, "lng": 124.2450, "city": "石垣島", "cityEn": "Ishigaki", "country": "日本" },
+
+  "ICN": { "lat": 37.4602, "lng": 126.4407, "city": "ソウル", "cityEn": "Seoul", "country": "韓国" },
+  "GMP": { "lat": 37.5583, "lng": 126.7906, "city": "ソウル", "cityEn": "Seoul", "country": "韓国" },
+  "PUS": { "lat": 35.1795, "lng": 128.9382, "city": "釜山", "cityEn": "Busan", "country": "韓国" },
+  "CJU": { "lat": 33.5113, "lng": 126.4929, "city": "済州島", "cityEn": "Jeju", "country": "韓国" },
+
+  "PEK": { "lat": 40.0799, "lng": 116.6031, "city": "北京", "cityEn": "Beijing", "country": "中国" },
+  "PKX": { "lat": 39.5098, "lng": 116.4105, "city": "北京", "cityEn": "Beijing", "country": "中国" },
+  "PVG": { "lat": 31.1443, "lng": 121.8083, "city": "上海", "cityEn": "Shanghai", "country": "中国" },
+  "SHA": { "lat": 31.1979, "lng": 121.3363, "city": "上海", "cityEn": "Shanghai", "country": "中国" },
+  "CAN": { "lat": 23.3924, "lng": 113.2988, "city": "広州", "cityEn": "Guangzhou", "country": "中国" },
+  "SZX": { "lat": 22.6393, "lng": 113.8108, "city": "深圳", "cityEn": "Shenzhen", "country": "中国" },
+  "HKG": { "lat": 22.3080, "lng": 113.9185, "city": "香港", "cityEn": "Hong Kong", "country": "中国" },
+  "CTU": { "lat": 30.5728, "lng": 103.9472, "city": "成都", "cityEn": "Chengdu", "country": "中国" },
+  "CKG": { "lat": 29.7192, "lng": 106.6422, "city": "重慶", "cityEn": "Chongqing", "country": "中国" },
+  "XIY": { "lat": 34.4471, "lng": 108.7516, "city": "西安", "cityEn": "Xi'an", "country": "中国" },
+  "HGH": { "lat": 30.2295, "lng": 120.4343, "city": "杭州", "cityEn": "Hangzhou", "country": "中国" },
+  "NKG": { "lat": 31.7420, "lng": 118.8620, "city": "南京", "cityEn": "Nanjing", "country": "中国" },
+  "TSN": { "lat": 39.1244, "lng": 117.3462, "city": "天津", "cityEn": "Tianjin", "country": "中国" },
+  "WUH": { "lat": 30.7838, "lng": 114.2081, "city": "武漢", "cityEn": "Wuhan", "country": "中国" },
+  "TAO": { "lat": 36.2661, "lng": 120.3744, "city": "青島", "cityEn": "Qingdao", "country": "中国" },
+  "DLC": { "lat": 38.9657, "lng": 121.5386, "city": "大連", "cityEn": "Dalian", "country": "中国" },
+  "SHE": { "lat": 41.6398, "lng": 123.4834, "city": "瀋陽", "cityEn": "Shenyang", "country": "中国" },
+  "XMN": { "lat": 24.5440, "lng": 118.1277, "city": "アモイ", "cityEn": "Xiamen", "country": "中国" },
+  "KMG": { "lat": 24.9924, "lng": 102.7432, "city": "昆明", "cityEn": "Kunming", "country": "中国" },
+
+  "TPE": { "lat": 25.0797, "lng": 121.2342, "city": "台北", "cityEn": "Taipei", "country": "台湾" },
+  "TSA": { "lat": 25.0694, "lng": 121.5525, "city": "台北", "cityEn": "Taipei", "country": "台湾" },
+  "KHH": { "lat": 22.5771, "lng": 120.3500, "city": "高雄", "cityEn": "Kaohsiung", "country": "台湾" },
+  "RMQ": { "lat": 24.2647, "lng": 120.6210, "city": "台中", "cityEn": "Taichung", "country": "台湾" },
+
+  "MNL": { "lat": 14.5086, "lng": 121.0194, "city": "マニラ", "cityEn": "Manila", "country": "フィリピン" },
+  "CEB": { "lat": 10.3074, "lng": 123.9790, "city": "セブ", "cityEn": "Cebu", "country": "フィリピン" },
+
+  "BKK": { "lat": 13.6900, "lng": 100.7501, "city": "バンコク", "cityEn": "Bangkok", "country": "タイ" },
+  "DMK": { "lat": 13.9126, "lng": 100.6069, "city": "バンコク", "cityEn": "Bangkok", "country": "タイ" },
+  "HKT": { "lat": 8.1132, "lng": 98.3169, "city": "プーケット", "cityEn": "Phuket", "country": "タイ" },
+  "CNX": { "lat": 18.7668, "lng": 98.9625, "city": "チェンマイ", "cityEn": "Chiang Mai", "country": "タイ" },
+
+  "SIN": { "lat": 1.3644, "lng": 103.9915, "city": "シンガポール", "cityEn": "Singapore", "country": "シンガポール" },
+
+  "KUL": { "lat": 2.7456, "lng": 101.7099, "city": "クアラルンプール", "cityEn": "Kuala Lumpur", "country": "マレーシア" },
+
+  "CGK": { "lat": -6.1256, "lng": 106.6559, "city": "ジャカルタ", "cityEn": "Jakarta", "country": "インドネシア" },
+  "DPS": { "lat": -8.7482, "lng": 115.1672, "city": "バリ", "cityEn": "Bali", "country": "インドネシア" },
+
+  "SGN": { "lat": 10.8188, "lng": 106.6520, "city": "ホーチミン", "cityEn": "Ho Chi Minh City", "country": "ベトナム" },
+  "HAN": { "lat": 21.2187, "lng": 105.8072, "city": "ハノイ", "cityEn": "Hanoi", "country": "ベトナム" },
+  "DAD": { "lat": 16.0439, "lng": 108.1994, "city": "ダナン", "cityEn": "Da Nang", "country": "ベトナム" },
+
+  "DEL": { "lat": 28.5562, "lng": 77.1000, "city": "デリー", "cityEn": "Delhi", "country": "インド" },
+  "BOM": { "lat": 19.0896, "lng": 72.8656, "city": "ムンバイ", "cityEn": "Mumbai", "country": "インド" },
+  "BLR": { "lat": 13.1986, "lng": 77.7066, "city": "バンガロール", "cityEn": "Bangalore", "country": "インド" },
+  "MAA": { "lat": 12.9941, "lng": 80.1709, "city": "チェンナイ", "cityEn": "Chennai", "country": "インド" },
+  "CCU": { "lat": 22.6547, "lng": 88.4467, "city": "コルカタ", "cityEn": "Kolkata", "country": "インド" },
+
+  "DXB": { "lat": 25.2532, "lng": 55.3657, "city": "ドバイ", "cityEn": "Dubai", "country": "UAE" },
+  "AUH": { "lat": 24.4330, "lng": 54.6511, "city": "アブダビ", "cityEn": "Abu Dhabi", "country": "UAE" },
+  "DOH": { "lat": 25.2609, "lng": 51.6138, "city": "ドーハ", "cityEn": "Doha", "country": "カタール" },
+
+  "JFK": { "lat": 40.6413, "lng": -73.7781, "city": "ニューヨーク", "cityEn": "New York", "country": "アメリカ" },
+  "EWR": { "lat": 40.6895, "lng": -74.1745, "city": "ニューアーク", "cityEn": "Newark", "country": "アメリカ" },
+  "LGA": { "lat": 40.7769, "lng": -73.8740, "city": "ニューヨーク", "cityEn": "New York", "country": "アメリカ" },
+  "LAX": { "lat": 33.9416, "lng": -118.4085, "city": "ロサンゼルス", "cityEn": "Los Angeles", "country": "アメリカ" },
+  "SFO": { "lat": 37.6213, "lng": -122.3790, "city": "サンフランシスコ", "cityEn": "San Francisco", "country": "アメリカ" },
+  "ORD": { "lat": 41.9742, "lng": -87.9073, "city": "シカゴ", "cityEn": "Chicago", "country": "アメリカ" },
+  "DFW": { "lat": 32.8998, "lng": -97.0403, "city": "ダラス", "cityEn": "Dallas", "country": "アメリカ" },
+  "ATL": { "lat": 33.6407, "lng": -84.4277, "city": "アトランタ", "cityEn": "Atlanta", "country": "アメリカ" },
+  "MIA": { "lat": 25.7959, "lng": -80.2870, "city": "マイアミ", "cityEn": "Miami", "country": "アメリカ" },
+  "SEA": { "lat": 47.4502, "lng": -122.3088, "city": "シアトル", "cityEn": "Seattle", "country": "アメリカ" },
+  "BOS": { "lat": 42.3656, "lng": -71.0096, "city": "ボストン", "cityEn": "Boston", "country": "アメリカ" },
+  "DEN": { "lat": 39.8561, "lng": -104.6737, "city": "デンバー", "cityEn": "Denver", "country": "アメリカ" },
+  "IAD": { "lat": 38.9531, "lng": -77.4565, "city": "ワシントンD.C.", "cityEn": "Washington D.C.", "country": "アメリカ" },
+  "DCA": { "lat": 38.8512, "lng": -77.0402, "city": "ワシントンD.C.", "cityEn": "Washington D.C.", "country": "アメリカ" },
+  "PHX": { "lat": 33.4373, "lng": -112.0078, "city": "フェニックス", "cityEn": "Phoenix", "country": "アメリカ" },
+  "LAS": { "lat": 36.0840, "lng": -115.1537, "city": "ラスベガス", "cityEn": "Las Vegas", "country": "アメリカ" },
+  "SAN": { "lat": 32.7336, "lng": -117.1897, "city": "サンディエゴ", "cityEn": "San Diego", "country": "アメリカ" },
+  "IAH": { "lat": 29.9902, "lng": -95.3368, "city": "ヒューストン", "cityEn": "Houston", "country": "アメリカ" },
+  "MSP": { "lat": 44.8848, "lng": -93.2223, "city": "ミネアポリス", "cityEn": "Minneapolis", "country": "アメリカ" },
+  "DTW": { "lat": 42.2162, "lng": -83.3554, "city": "デトロイト", "cityEn": "Detroit", "country": "アメリカ" },
+  "PHL": { "lat": 39.8721, "lng": -75.2411, "city": "フィラデルフィア", "cityEn": "Philadelphia", "country": "アメリカ" },
+  "CLT": { "lat": 35.2140, "lng": -80.9473, "city": "シャーロット", "cityEn": "Charlotte", "country": "アメリカ" },
+  "MCO": { "lat": 28.4312, "lng": -81.3081, "city": "オーランド", "cityEn": "Orlando", "country": "アメリカ" },
+  "HNL": { "lat": 21.3187, "lng": -157.9225, "city": "ホノルル", "cityEn": "Honolulu", "country": "アメリカ" },
+  "OGG": { "lat": 20.8986, "lng": -156.4305, "city": "マウイ", "cityEn": "Maui", "country": "アメリカ" },
+  "ANC": { "lat": 61.1743, "lng": -149.9962, "city": "アンカレジ", "cityEn": "Anchorage", "country": "アメリカ" },
+  "GUM": { "lat": 13.4834, "lng": 144.7959, "city": "グアム", "cityEn": "Guam", "country": "アメリカ" },
+  "SJC": { "lat": 37.3626, "lng": -121.9291, "city": "サンノゼ", "cityEn": "San Jose", "country": "アメリカ" },
+  "PDX": { "lat": 45.5898, "lng": -122.5951, "city": "ポートランド", "cityEn": "Portland", "country": "アメリカ" },
+
+  "YVR": { "lat": 49.1967, "lng": -123.1815, "city": "バンクーバー", "cityEn": "Vancouver", "country": "カナダ" },
+  "YYZ": { "lat": 43.6777, "lng": -79.6248, "city": "トロント", "cityEn": "Toronto", "country": "カナダ" },
+  "YUL": { "lat": 45.4706, "lng": -73.7408, "city": "モントリオール", "cityEn": "Montreal", "country": "カナダ" },
+  "YYC": { "lat": 51.1315, "lng": -114.0106, "city": "カルガリー", "cityEn": "Calgary", "country": "カナダ" },
+
+  "MEX": { "lat": 19.4361, "lng": -99.0719, "city": "メキシコシティ", "cityEn": "Mexico City", "country": "メキシコ" },
+  "CUN": { "lat": 21.0365, "lng": -86.8771, "city": "カンクン", "cityEn": "Cancun", "country": "メキシコ" },
+
+  "GRU": { "lat": -23.4356, "lng": -46.4731, "city": "サンパウロ", "cityEn": "Sao Paulo", "country": "ブラジル" },
+  "GIG": { "lat": -22.8090, "lng": -43.2507, "city": "リオデジャネイロ", "cityEn": "Rio de Janeiro", "country": "ブラジル" },
+
+  "EZE": { "lat": -34.8222, "lng": -58.5358, "city": "ブエノスアイレス", "cityEn": "Buenos Aires", "country": "アルゼンチン" },
+  "SCL": { "lat": -33.3930, "lng": -70.7858, "city": "サンティアゴ", "cityEn": "Santiago", "country": "チリ" },
+  "LIM": { "lat": -12.0219, "lng": -77.1143, "city": "リマ", "cityEn": "Lima", "country": "ペルー" },
+  "BOG": { "lat": 4.7016, "lng": -74.1469, "city": "ボゴタ", "cityEn": "Bogota", "country": "コロンビア" },
+
+  "LHR": { "lat": 51.4700, "lng": -0.4543, "city": "ロンドン", "cityEn": "London", "country": "イギリス" },
+  "LGW": { "lat": 51.1537, "lng": -0.1821, "city": "ロンドン", "cityEn": "London", "country": "イギリス" },
+  "STN": { "lat": 51.8850, "lng": 0.2350, "city": "ロンドン", "cityEn": "London", "country": "イギリス" },
+  "MAN": { "lat": 53.3537, "lng": -2.2750, "city": "マンチェスター", "cityEn": "Manchester", "country": "イギリス" },
+  "EDI": { "lat": 55.9500, "lng": -3.3725, "city": "エディンバラ", "cityEn": "Edinburgh", "country": "イギリス" },
+
+  "CDG": { "lat": 49.0097, "lng": 2.5479, "city": "パリ", "cityEn": "Paris", "country": "フランス" },
+  "ORY": { "lat": 48.7233, "lng": 2.3794, "city": "パリ", "cityEn": "Paris", "country": "フランス" },
+  "NCE": { "lat": 43.6584, "lng": 7.2159, "city": "ニース", "cityEn": "Nice", "country": "フランス" },
+  "LYS": { "lat": 45.7256, "lng": 5.0811, "city": "リヨン", "cityEn": "Lyon", "country": "フランス" },
+
+  "FRA": { "lat": 50.0379, "lng": 8.5622, "city": "フランクフルト", "cityEn": "Frankfurt", "country": "ドイツ" },
+  "MUC": { "lat": 48.3538, "lng": 11.7861, "city": "ミュンヘン", "cityEn": "Munich", "country": "ドイツ" },
+  "TXL": { "lat": 52.5597, "lng": 13.2877, "city": "ベルリン", "cityEn": "Berlin", "country": "ドイツ" },
+  "BER": { "lat": 52.3667, "lng": 13.5033, "city": "ベルリン", "cityEn": "Berlin", "country": "ドイツ" },
+  "DUS": { "lat": 51.2895, "lng": 6.7668, "city": "デュッセルドルフ", "cityEn": "Dusseldorf", "country": "ドイツ" },
+  "HAM": { "lat": 53.6304, "lng": 10.0063, "city": "ハンブルク", "cityEn": "Hamburg", "country": "ドイツ" },
+
+  "AMS": { "lat": 52.3105, "lng": 4.7683, "city": "アムステルダム", "cityEn": "Amsterdam", "country": "オランダ" },
+
+  "BRU": { "lat": 50.9014, "lng": 4.4844, "city": "ブリュッセル", "cityEn": "Brussels", "country": "ベルギー" },
+
+  "ZRH": { "lat": 47.4647, "lng": 8.5492, "city": "チューリッヒ", "cityEn": "Zurich", "country": "スイス" },
+  "GVA": { "lat": 46.2380, "lng": 6.1089, "city": "ジュネーブ", "cityEn": "Geneva", "country": "スイス" },
+
+  "VIE": { "lat": 48.1103, "lng": 16.5697, "city": "ウィーン", "cityEn": "Vienna", "country": "オーストリア" },
+
+  "FCO": { "lat": 41.8003, "lng": 12.2389, "city": "ローマ", "cityEn": "Rome", "country": "イタリア" },
+  "MXP": { "lat": 45.6306, "lng": 8.7281, "city": "ミラノ", "cityEn": "Milan", "country": "イタリア" },
+  "LIN": { "lat": 45.4456, "lng": 9.2778, "city": "ミラノ", "cityEn": "Milan", "country": "イタリア" },
+  "VCE": { "lat": 45.5053, "lng": 12.3519, "city": "ベネチア", "cityEn": "Venice", "country": "イタリア" },
+  "NAP": { "lat": 40.8860, "lng": 14.2908, "city": "ナポリ", "cityEn": "Naples", "country": "イタリア" },
+
+  "MAD": { "lat": 40.4983, "lng": -3.5676, "city": "マドリード", "cityEn": "Madrid", "country": "スペイン" },
+  "BCN": { "lat": 41.2974, "lng": 2.0833, "city": "バルセロナ", "cityEn": "Barcelona", "country": "スペイン" },
+
+  "LIS": { "lat": 38.7756, "lng": -9.1354, "city": "リスボン", "cityEn": "Lisbon", "country": "ポルトガル" },
+
+  "CPH": { "lat": 55.6180, "lng": 12.6560, "city": "コペンハーゲン", "cityEn": "Copenhagen", "country": "デンマーク" },
+  "ARN": { "lat": 59.6498, "lng": 17.9238, "city": "ストックホルム", "cityEn": "Stockholm", "country": "スウェーデン" },
+  "OSL": { "lat": 60.1976, "lng": 11.0004, "city": "オスロ", "cityEn": "Oslo", "country": "ノルウェー" },
+  "HEL": { "lat": 60.3172, "lng": 24.9633, "city": "ヘルシンキ", "cityEn": "Helsinki", "country": "フィンランド" },
+
+  "PRG": { "lat": 50.1008, "lng": 14.2600, "city": "プラハ", "cityEn": "Prague", "country": "チェコ" },
+  "WAW": { "lat": 52.1657, "lng": 20.9671, "city": "ワルシャワ", "cityEn": "Warsaw", "country": "ポーランド" },
+  "BUD": { "lat": 47.4298, "lng": 19.2610, "city": "ブダペスト", "cityEn": "Budapest", "country": "ハンガリー" },
+
+  "ATH": { "lat": 37.9364, "lng": 23.9445, "city": "アテネ", "cityEn": "Athens", "country": "ギリシャ" },
+
+  "IST": { "lat": 41.2753, "lng": 28.7519, "city": "イスタンブール", "cityEn": "Istanbul", "country": "トルコ" },
+  "SAW": { "lat": 40.8986, "lng": 29.3092, "city": "イスタンブール", "cityEn": "Istanbul", "country": "トルコ" },
+
+  "SVO": { "lat": 55.9726, "lng": 37.4146, "city": "モスクワ", "cityEn": "Moscow", "country": "ロシア" },
+  "DME": { "lat": 55.4088, "lng": 37.9063, "city": "モスクワ", "cityEn": "Moscow", "country": "ロシア" },
+  "LED": { "lat": 59.8003, "lng": 30.2625, "city": "サンクトペテルブルク", "cityEn": "Saint Petersburg", "country": "ロシア" },
+
+  "CAI": { "lat": 30.1219, "lng": 31.4056, "city": "カイロ", "cityEn": "Cairo", "country": "エジプト" },
+  "JNB": { "lat": -26.1367, "lng": 28.2411, "city": "ヨハネスブルグ", "cityEn": "Johannesburg", "country": "南アフリカ" },
+  "CPT": { "lat": -33.9715, "lng": 18.6021, "city": "ケープタウン", "cityEn": "Cape Town", "country": "南アフリカ" },
+  "NBO": { "lat": -1.3192, "lng": 36.9278, "city": "ナイロビ", "cityEn": "Nairobi", "country": "ケニア" },
+  "ADD": { "lat": 8.9779, "lng": 38.7993, "city": "アディスアベバ", "cityEn": "Addis Ababa", "country": "エチオピア" },
+  "CMN": { "lat": 33.3675, "lng": -7.5898, "city": "カサブランカ", "cityEn": "Casablanca", "country": "モロッコ" },
+
+  "SYD": { "lat": -33.9399, "lng": 151.1753, "city": "シドニー", "cityEn": "Sydney", "country": "オーストラリア" },
+  "MEL": { "lat": -37.6690, "lng": 144.8410, "city": "メルボルン", "cityEn": "Melbourne", "country": "オーストラリア" },
+  "BNE": { "lat": -27.3942, "lng": 153.1218, "city": "ブリスベン", "cityEn": "Brisbane", "country": "オーストラリア" },
+  "PER": { "lat": -31.9403, "lng": 115.9670, "city": "パース", "cityEn": "Perth", "country": "オーストラリア" },
+  "CNS": { "lat": -16.8858, "lng": 145.7555, "city": "ケアンズ", "cityEn": "Cairns", "country": "オーストラリア" },
+  "OOL": { "lat": -28.1644, "lng": 153.5047, "city": "ゴールドコースト", "cityEn": "Gold Coast", "country": "オーストラリア" },
+
+  "AKL": { "lat": -37.0082, "lng": 174.7917, "city": "オークランド", "cityEn": "Auckland", "country": "ニュージーランド" },
+  "CHC": { "lat": -43.4894, "lng": 172.5325, "city": "クライストチャーチ", "cityEn": "Christchurch", "country": "ニュージーランド" },
+  "WLG": { "lat": -41.3272, "lng": 174.8050, "city": "ウェリントン", "cityEn": "Wellington", "country": "ニュージーランド" },
+
+  "NAN": { "lat": -17.7554, "lng": 177.4434, "city": "ナンディ", "cityEn": "Nadi", "country": "フィジー" },
+  "PPT": { "lat": -17.5537, "lng": -149.6063, "city": "パペーテ", "cityEn": "Papeete", "country": "タヒチ" },
+  "SPN": { "lat": 15.1190, "lng": 145.7295, "city": "サイパン", "cityEn": "Saipan", "country": "アメリカ" },
+  "ROR": { "lat": 7.3675, "lng": 134.5443, "city": "パラオ", "cityEn": "Palau", "country": "パラオ" },
+
+  "TLV": { "lat": 32.0055, "lng": 34.8854, "city": "テルアビブ", "cityEn": "Tel Aviv", "country": "イスラエル" },
+  "JED": { "lat": 21.6796, "lng": 39.1565, "city": "ジェッダ", "cityEn": "Jeddah", "country": "サウジアラビア" },
+  "RUH": { "lat": 24.9576, "lng": 46.6988, "city": "リヤド", "cityEn": "Riyadh", "country": "サウジアラビア" },
+  "BAH": { "lat": 26.2708, "lng": 50.6336, "city": "バーレーン", "cityEn": "Bahrain", "country": "バーレーン" },
+  "KWI": { "lat": 29.2266, "lng": 47.9689, "city": "クウェート", "cityEn": "Kuwait", "country": "クウェート" },
+  "MCT": { "lat": 23.5933, "lng": 58.2844, "city": "マスカット", "cityEn": "Muscat", "country": "オマーン" },
+
+  "KTM": { "lat": 27.6966, "lng": 85.3591, "city": "カトマンズ", "cityEn": "Kathmandu", "country": "ネパール" },
+  "DAC": { "lat": 23.8433, "lng": 90.3978, "city": "ダッカ", "cityEn": "Dhaka", "country": "バングラデシュ" },
+  "CMB": { "lat": 7.1808, "lng": 79.8841, "city": "コロンボ", "cityEn": "Colombo", "country": "スリランカ" },
+  "MLE": { "lat": 4.1918, "lng": 73.5290, "city": "マレ", "cityEn": "Male", "country": "モルディブ" },
+
+  "PNH": { "lat": 11.5466, "lng": 104.8441, "city": "プノンペン", "cityEn": "Phnom Penh", "country": "カンボジア" },
+  "REP": { "lat": 13.4107, "lng": 103.8128, "city": "シェムリアップ", "cityEn": "Siem Reap", "country": "カンボジア" },
+  "RGN": { "lat": 16.9073, "lng": 96.1332, "city": "ヤンゴン", "cityEn": "Yangon", "country": "ミャンマー" },
+  "VTE": { "lat": 17.9883, "lng": 102.5633, "city": "ビエンチャン", "cityEn": "Vientiane", "country": "ラオス" },
+
+  "ULN": { "lat": 47.8431, "lng": 106.7666, "city": "ウランバートル", "cityEn": "Ulaanbaatar", "country": "モンゴル" },
+
+  "MFM": { "lat": 22.1496, "lng": 113.5915, "city": "マカオ", "cityEn": "Macau", "country": "中国" }
+}

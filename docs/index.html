@@ -14,6 +14,10 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+    <!-- Leaflet CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+        integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+        crossorigin="" />
     <!-- Custom CSS -->
     <link href="css/style.css" rel="stylesheet">
 
@@ -161,6 +165,47 @@
         </div>
     </footer>
 
+    <!-- Flight Detail Modal -->
+    <div id="flight-modal" class="modal-overlay">
+        <div class="modal-content">
+            <button class="modal-close" aria-label="閉じる">
+                <i class="material-icons">close</i>
+            </button>
+            <div class="modal-header">
+                <h2 class="modal-flight-name">NH1225便</h2>
+                <p class="modal-airline-name">全日本空輸</p>
+            </div>
+            <div id="flight-map" class="flight-map"></div>
+            <div class="city-info-grid">
+                <div class="city-card departure">
+                    <h3 class="city-title">
+                        <span class="city-label">出発</span>
+                        <span class="city-name">東京</span>
+                        <span class="city-code">(HND)</span>
+                    </h3>
+                    <p class="city-summary">読み込み中...</p>
+                </div>
+                <div class="city-card arrival">
+                    <h3 class="city-title">
+                        <span class="city-label">到着</span>
+                        <span class="city-name">ロサンゼルス</span>
+                        <span class="city-code">(LAX)</span>
+                    </h3>
+                    <p class="city-summary">読み込み中...</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Leaflet JS -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+        integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+        crossorigin=""></script>
+    <!-- App Scripts -->
+    <script src="js/wikipedia.js"></script>
+    <script src="js/airport-search.js"></script>
+    <script src="js/map.js"></script>
+    <script src="js/modal.js"></script>
     <script src="js/app.js"></script>
 </body>
 

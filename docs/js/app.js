@@ -78,6 +78,12 @@ function createFlightRow(flight, index) {
         <td>${escapeHtml(arrivalPlace)}</td>
         <td class="hidden lg:table-cell text-gray-500">${escapeHtml(arrivalCode)}</td>
     `;
+
+    // Add click handler for modal
+    tr.addEventListener('click', () => {
+        FlightModal.open(flight);
+    });
+
     return tr;
 }
 
@@ -148,4 +154,7 @@ document.addEventListener('keydown', (e) => {
 });
 
 // Initialize on load
-document.addEventListener('DOMContentLoaded', initializeSelects);
+document.addEventListener('DOMContentLoaded', () => {
+    initializeSelects();
+    FlightModal.init();
+});
